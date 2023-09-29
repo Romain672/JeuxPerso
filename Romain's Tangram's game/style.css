@@ -1,0 +1,117 @@
+* {
+    background-color:black;
+    color:white;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+header > h1 {
+    margin: 20px 5%;
+}
+
+
+/* Ajoute une bordure stylé vers le coin bas droite (par défaut blanche): */
+/*#conteneurlevels > button, svg, #displaylevel, .smallarticle {*/
+h1,  article, #displaylevel, article>span>button {
+    border-width: 5px;
+    border-top-width:1px;
+    border-left-width:1px;
+    border-style: solid;
+}
+
+svg {
+    border-color: white;
+    background-color: red;
+}
+h1 {
+    background-color: purple;
+    font-size: 35px;
+    border-color:#600060;
+}
+header > h1 > img{
+    height:1em;
+    width: 1em;
+    position: relative;
+    top:0.15em;
+    margin: 0 0.5em;
+    font-size: inherit;
+    background-color: inherit;
+}
+
+
+main>article {
+    display: flex;
+    display:inline-block;
+}
+.bigarticle {
+    background-color: darkred;
+    /*min-width:1200px;
+    width:70%;*/
+    height:600px;
+}
+
+#displaylevel {
+    margin-bottom: 1em;
+    display:inline-block;
+    margin-left:10%;
+    background-color: green;
+    padding:0.2em;
+    border-color: #004800;
+}
+#displaylevelactual, #displaymaxlevel {
+    background-color: inherit;
+}
+
+
+
+
+
+.smallarticle {
+    background-color: darkorange;
+    /*min-width:100px;*/
+    /*width:29%;*/
+    height:600px;
+    vertical-align: top;
+    width:200px;
+    border-color:orangered;
+}
+
+#conteneurlevels {
+    background-color: inherit;
+    display:flex;
+    flex-wrap:wrap;
+    margin-bottom: 10px;
+}
+
+.smallarticle > header, .smallarticle > #timer, #cheat {
+    display:inline-block;
+    width:90%;
+    margin-left:5%;
+    text-align: center;
+    color:white;
+    text-decoration: underline;
+    background-color: red;
+    margin-bottom: 10px;
+
+}
+
+#conteneurlevels > button {
+    background-color: #0000ff;
+    width:40px;
+    height:40px;
+    margin:5px;
+    border-color: #00bbff;
+}
+
+@media screen and (max-width:1133px) {
+    .smallarticle {
+        width:900px;
+        height:165px;
+    }
+    #conteneurlevels {
+        margin:5px 150px;
+    }
+    #conteneurlevels > button {
+        margin:5px 10px;
+    }
+}

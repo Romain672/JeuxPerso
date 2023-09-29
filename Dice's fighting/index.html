@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Dice's fighting</title>
+    <link rel="icon" href="new.ico" type="image/icon type">
+</head>
+<!--Images from https://pixabay.com/-->
+
+<body id="body">
+    <div id="conteneurperso">
+        <div id="persoetde4" class="perso ally">
+            🚶‍♂️5
+            <div id="nom4" class="nom">nom4</div>
+            <div id="de4" class="de deperso">dé4</div>
+            <div id="hp4" class="hp">hp4</div>
+            <div id="atks4" class="atkmel">atkmel4 | atkran4</div>
+        </div>
+        <div id="persoetde3" class="perso ally">
+            🚶‍♂️4
+            <div id="nom3" class="nom">nom3</div>
+            <div id="de3" class="de deperso">dé3</div>
+            <div id="hp3" class="hp">hp3</div>
+            <div id="atks3" class="atkmel">atkmel3 | atkran3</div>
+        </div>
+        <div id="persoetde2" class="perso ally">
+            🚶‍♂️3
+            <div id="nom2" class="nom">nom2</div>
+            <div id="de2" class="de deperso">dé2</div>
+            <div id="hp2" class="hp">hp2</div>
+            <div id="atks2" class="atkmel">atkmel2 | atkran2</div>
+        </div>
+        <div id="persoetde1" class="perso ally">
+            🚶‍♂️2
+            <div id="nom1" class="nom">nom1</div>
+            <div id="de1" class="de deperso">dé1</div>
+            <div id="hp1" class="hp">hp1</div>
+            <div id="atks1" class="atkmel">atkmel1 | atkran1</div>
+        </div>
+        <div id="persoetde0" class="perso ally">
+            🚶‍♂️1
+            <div id="nom0" class="nom">nom0</div>
+            <div id="de0" class="de deperso">dé0</div>
+            <div id="hp0" class="hp">hp0</div>
+            <div id="atks0" class="atkmel">atkmel0 | atkran0</div>
+        </div>
+        <div id="poing">
+            <div id="imgpoing">👊</div>
+            <div id="skip">skip turn</div>
+        </div>
+        <div id="persoetde5" class="perso"> <!--ennemi-->
+            💀
+            <div id="nom5" class="nom">nom5</div>
+            <div id="perso5">5</div>
+            <div id="hp5">hp5</div>
+            <div id="atkmel5">atkmel5</div>
+            <div></div>
+        </div>
+    </div>
+
+    <br>
+    <div id="messagecentral">Loading crashed. Try to hard refresh the page (ctrl+f5), remove your cookies manually, or use firefox or chrome. And you can report the bug to me. Thanks :)</div>
+    <br>
+    <div id="conteneurlifebar">
+        <div id="textlifebar">20 / 20</div>
+        <div id="greenlifebar" class="lifebar"></div>
+        <div id="redlifebar" class="lifebar"></div>
+    </div>
+    <br>
+
+    <div id="conteneurcarte">
+        <div id="carte0" class="carte"><!--dom divs--></div>
+        <div id="carte1" class="carte"><!--dom divs--></div>
+        <div id="carte2" class="carte"><!--dom divs--></div>
+        <div id="carte3" class="carte"><!--dom divs--></div>
+        <div id="carte4" class="carte"><!--dom divs--></div>
+        <div id="carte5" class="carte"><!--dom divs--></div>
+    </div>
+
+    <br><br>
+    <div id="containerrules">
+        <div id="displayrules">Display rules</div>
+        <div id="rules">
+            <span id="rerolladvanced3"></span><br>
+            Its a solo game. You have some characters in the top left in order. You have an enemy in the top right. You
+            have some cards with effects at the bottom.<br>
+            Each turn, you will be able to play one and only one of the dice you rolled (in the top left) by clicking on
+            them. It will activate the card with the same number from your deck (bottom).<br>
+            <br>
+            Then, if you kill the enemy, a new one will appear and all your dices are rerolled.<br>
+            If you dont, the character in the (🤲) first/rightmost position will take damage equal to the enemy attack ⚔️, then
+            all your dices will be rerolled.<br>
+            <br>
+            The effects are:<br>
+            - 🔁: you can play another dice this turn (🔁🔁: and reroll that dice into another number)<span id="rerolladvanced"></span><br>
+            - 💖: heal the character which rolled the dice by 1 (up to his max hp)(🩸: lose 1 instead)(💕: all other players instead)<br>
+            - ⚔️ (🏹): deal the ⚔️(🏹) damage of the character which rolled the dice to the enemy<br>
+            - 🚶‍♂️: move the character to a certain position or to one spot to the left or right<span id="rerolladvanced4"></span><br>
+            - ⌛: the dice is disabled for one extra turn<span id="rerolladvanced2"></span><br>
+            - 💥: lose one after each use. When none are left, remove all effects of the card<br>
+            <br>
+            If one of your character goes to 0 hp or below, your 50 hp bar will take damage equal to the excedent damage. It regain 5 hp after each kill. If that bar goes to 0 hp, you lose.<br>
+            <br>
+            <span id="rerolladvanced5">Extras:<br>
+            You gain one skip every two turns.<br>
+            Make sure to hard refresh the page (ctrl+f5) for the last update if it's not the first time you play.<br>
+            <br>
+            Balance:<br>
+            Starting deck cards have about 6 points. Cards proposed have between 9 and 10 points.<br>
+            💖 cost 1 | 💕 cost 4 | 🔁 cost 6 | 🔁🔁 cost 9 | ⚔️🏹 each cost 3 | 🚶‍♂️> is free | 🚶‍♂️1 cost 1 | 🩸
+            cost -1 | ⌛ cost -2 | 💥s gives +16 value | permanent buff cost 12<br>
+            Some cards can have above this amount if they are too much specialised or have a 🚶‍♂️ which is actively
+            bad.<br></span>
+            <br>
+        </div>
+    </div>
+    <div id="conteneurcarteextraandextratextandskipcard">
+        <div id="extratext">You killed. Choose a card to replace your deck:</div>
+        <div id="conteneurcarteextra">
+            <div id="carteextra7" class="carte carteextra"><!--dom divs--></div>
+            <div id="carteextra8" class="carte carteextra"><!--dom divs--></div>
+            <div id="carteextra9" class="carte carteextra"><!--dom divs--></div>
+            <div id="carteextra10" class="carte carteextra"><!--dom divs--></div>
+            <div id="carteextra11" class="carte carteextra"><!--dom divs--></div>
+        </div>
+        <div id="skipcardandholdtosee">
+            <div id="skipcard"></div>
+            <div id="holdtosee">👀</div>
+        </div>
+    </div>
+
+    <div id="grayscreen"></div>
+    <div id="playagain"><br>Play again</div>
+    <div id="parameters">
+        <picture>
+            <img id="iconparameter" src="construct.svg" alt="">
+        </picture>
+    </div>
+    <div id="conteneurparameters">
+        <div id="disablecolors" class="choiceparameter">Colors: all</div>
+        <div id="content" class="choiceparameter">Content: base game (extremely encouraged for first game or casual
+            play)</div>
+        <div id="cardproposedonkill" class="choiceparameter">Choices on kill: 5</div>
+        <div id="randostartcard" class="choiceparameter">Starting random cards: 2</div>
+        <div id="animationsspeed" class="choiceparameter">Animations speed: 2s</div>
+        <div id="sets" class="choiceparameter">Cards proposed: by set (choose random if you change 'Choices on kill' OR
+            disable some colors)</div>
+        <div id="disableset0" class="choiceparameter">Set 0: Basics: enabled</div>
+        <div id="disableset1" class="choiceparameter">Set 1: Delay: enabled</div>
+        <div id="disableset2" class="choiceparameter">Set 2: Heal: enabled</div>
+        <div id="disableset3" class="choiceparameter">Set 3: Bombs: enabled</div>
+        <div id="disableset4" class="choiceparameter">Set 4: Extras: enabled</div>
+        <div id="disablesetall" class="choiceparameter">Disable all</div>
+        <div id="defaultvalue" class="choiceparameter">Put to default value</div>
+
+        <!--//0easy         1$c        2delay 3delayweird   4medic        5move    6$cc      7bomb     8permanentup 9positionalup 10unique
+//let color = ["darkgreen", "darkblue", "darkcyan", "darkred", "darkorange", "cyan", "brown", "black", "indigo", "mediumvioletred", "black"];
+let color = ["darkgreen", "darkgreen", "darkcyan", "darkcyan", "darkred", "brown", "darkgreen", "indigo", "brown", "brown", "indigo", "darkslateblue", "black"];
+-->
+    </div>
+    <div id="closeparameters">Save for this game only</div>
+    <div id="closeparametersandcookies">Save for this game and remember this for next time (=accept cookies)</div>
+    <div id="closeparameterscancel">Set to default value and close</div>
+    <br>
+
+    <script src="./java.js"></script>
+</body>
+
+</html>
