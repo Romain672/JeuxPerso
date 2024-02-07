@@ -18,7 +18,7 @@ function clickface() {
 function choix (lettre) {
     let predi = prediction(history);
     if (predi == "") {
-        document.getElementById("score").innerHTML = "Entrainement " + history.length + "/5";
+        document.getElementById("score").innerHTML = "Entrainement " + (history.length +1) + "/5";
         return;
     }
     if (predi==lettre) {
@@ -35,7 +35,7 @@ function choix (lettre) {
 }
 
 function prediction(array) {
-  if (array.length < 6) {
+  if (array.length < 5) {
     console.log("Entrainement");
     return "";
   }
