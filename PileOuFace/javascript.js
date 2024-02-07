@@ -17,10 +17,6 @@ function clickface() {
 
 function choix (lettre) {
     let predi = prediction(history);
-    if (predi == "") {
-        document.getElementById("score").innerHTML = "Entrainement " + (history.length +1) + "/5";
-        return;
-    }
     if (predi==lettre) {
         defaites++;
     } else {
@@ -35,10 +31,6 @@ function choix (lettre) {
 }
 
 function prediction(array) {
-  if (array.length < 5) {
-    console.log("Entrainement");
-    return "";
-  }
   for (let i = 1; i < array.length - 2; i++) {
     if (
       array[i] == array[0] &&
