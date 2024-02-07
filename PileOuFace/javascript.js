@@ -6,13 +6,13 @@ let victoires = 0;
 let defaites = 0;
 
 function clickpile() {
-  history.unshift("p");
   choix("p");
+  history.unshift("p");
 }
 
 function clickface() {
-  history.unshift("f");
   choix("f");
+  history.unshift("f");
 }
 
 function choix (lettre) {
